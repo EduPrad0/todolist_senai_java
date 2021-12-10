@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="709.0" prefWidth="1137.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.dprado.controller.IndexController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="115.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Todo List" wrappingWidth="192.99999929219484">
+         <font>
+            <Font name="Rage Italic" size="41.0" />
+         </font>
+      </Text>
+      <Text layoutX="246.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="© 2021 - dprado.com" wrappingWidth="97.99998852610588">
+         <font>
+            <Font name="Times New Roman" size="9.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="inputLimite" layoutX="124.0" layoutY="219.0" />
+      <ChoiceBox fx:id="selectUrg" layoutX="388.0" layoutY="219.0" prefWidth="150.0" />
+      <ImageView fitHeight="94.0" fitWidth="106.0" layoutX="418.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/doneIcon.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="textComentario" layoutX="98.0" layoutY="443.0" prefHeight="115.0" prefWidth="502.0" />
+      <TextField fx:id="inputTarefa" layoutX="124.0" layoutY="294.0" prefHeight="25.0" prefWidth="410.0" />
+      <TextField fx:id="inputStatus" disable="true" layoutX="124.0" layoutY="355.0" prefHeight="25.0" prefWidth="410.0" />
+      <ImageView fitHeight="691.0" fitWidth="150.0" layoutX="-57.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/araminho.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbDataLC" layoutX="151.0" layoutY="196.0" text="Data de realização" />
+      <Label layoutX="395.0" layoutY="196.0" text="Nivel de Urgência " />
+      <Label layoutX="295.0" layoutY="257.0" prefHeight="17.0" prefWidth="69.0" text="Tarefa">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbStatus" layoutX="272.0" layoutY="334.0" text="Próximo IdCode">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="260.0" layoutY="411.0" text="Comentário">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Button fx:id="btnConcluir" disable="true" layoutX="272.0" layoutY="591.0" mnemonicParsing="false" onAction="#handleConcluir" prefHeight="58.0" prefWidth="44.0" style="-fx-background-color: #FFF; -fx-border-width: 3px; -fx-border-color: #000;">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/concluido.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Concluido" />
+         </tooltip>
+      </Button>
+      <Button fx:id="btnLimpar" layoutX="523.0" layoutY="584.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="76.0" prefWidth="73.0" style="-fx-background-color: #FFF; -fx-border-width: 3px; -fx-border-color: #000;">
+         <graphic>
+            <ImageView fitHeight="44.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/eraser.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Limpar formulário" textAlignment="CENTER" />
+         </tooltip>
+      </Button>
+      <Button fx:id="btnAdiar" disable="true" layoutX="184.0" layoutY="588.0" mnemonicParsing="false" onAction="#handleAdiar" prefHeight="65.0" prefWidth="69.0" style="-fx-background-color: #FFF; -fx-border-width: 3px; -fx-border-color: #000;" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/adiar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Adiar" />
+         </tooltip>
+      </Button>
+      <Button fx:id="btnCriar" layoutX="91.0" layoutY="591.0" mnemonicParsing="false" onAction="#handleCriar" prefHeight="61.0" prefWidth="51.0" style="-fx-background-color: #FFF; -fx-border-width: 3px; -fx-border-color: #000;" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="59.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Salvar/Editar" />
+         </tooltip>
+      </Button>
+      <Button fx:id="btnApagar" disable="true" layoutX="360.0" layoutY="589.0" mnemonicParsing="false" onAction="#handleApagar" prefHeight="68.0" prefWidth="70.0" style="-fx-background-color: #FFF; -fx-border-width: 3px; -fx-border-color: #000;">
+         <graphic>
+            <ImageView fitHeight="58.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/trash.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <tooltip>
+            <Tooltip text="Apagar" />
+         </tooltip>
+      </Button>
+      <TableView fx:id="tvTarefa" layoutX="608.0" layoutY="165.0" prefHeight="524.0" prefWidth="502.0">
+        <columns>
+          <TableColumn fx:id="tcDataLimite" prefWidth="94.0" text="Data" />
+          <TableColumn fx:id="tcTarefa" minWidth="0.0" prefWidth="126.0" text="Tarefa" />
+            <TableColumn fx:id="tcUrgencia" prefWidth="149.0" text="Nivel de urgência" />
+            <TableColumn fx:id="tcStatus" prefWidth="132.0" text="Status" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfCodigo" editable="false" layoutX="211.0" layoutY="136.0" opacity="0.0" prefHeight="25.0" prefWidth="44.0" />
+      <Label fx:id="lbCode" layoutX="166.0" layoutY="140.0" opacity="0.0" prefHeight="17.0" prefWidth="36.0" text="Code :" />
+      <MenuBar layoutX="542.0" layoutY="13.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Arquivo">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openExportar" text="Exportar como HTML" />
+                  <MenuItem mnemonicParsing="false" onAction="#OpenSair" text="Sair" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openSobre" text="Sobre" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>
